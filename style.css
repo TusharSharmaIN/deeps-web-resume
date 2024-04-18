@@ -1,0 +1,153 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:100,200,300,400,500,700);
+@import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900);
+
+:root {
+  --blue: #1e90ff;
+  --white: #ffffff;
+  --black: #000000;
+  --gray: #6c757d;
+
+  --dark1: #333333;
+  --dark2: #2b2b2b;
+  --dark3: #151415;
+
+  --light1: #e0e1dd;
+  --light2: #f4f4f1;
+  --light3: #edf2f4;
+
+  --dark: var(--dark3);
+  --light: var(--light2);
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 960px;
+  margin: auto;
+  display: grid;
+  grid-row-gap: 20px;
+}
+
+.header {
+  grid-column: 1 / 4;
+  grid-row: 1;
+}
+
+.content {
+  grid-column: 1 / 4;
+}
+
+.sidebar {
+  grid-column: 1 / 2;
+}
+
+@media (min-width: 550px) {
+  .wrapper {
+    grid-template-columns: 2fr 4fr;
+    grid-column-gap: 2em;
+    grid-row-gap: 20px;
+  }
+
+  .header {
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+  }
+
+  .sidebar {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  .content {
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+  }
+}
+
+html {
+  font-size: 1em;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+body {
+  color: var(--light);
+  background-color: var(--dark);
+}
+
+h1 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  font-size: 3em;
+  text-transform: uppercase;
+  line-height: 1em;
+  margin-top: 0.5em;
+  margin-bottom: 0.35em;
+}
+
+h2 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 1.35em;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  line-height: 1em;
+  margin-top: 1.5em;
+  margin-bottom: 0.25em;
+}
+
+h3 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 1.25em;
+  line-height: 1em;
+  margin-top: 1.5em;
+  margin-bottom: 0.25em;
+}
+
+h4 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1em;
+  line-height: 1.2em;
+  margin-top: 0.5em;
+  margin-bottom: 0;
+}
+
+a {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 1.75em;
+}
+
+p,
+ul > li {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  line-height: 1.2em;
+  font-size: 0.9em;
+}
+
+hr {
+  height: 1px;
+  border: 0;
+  background: var(--light);
+  margin-bottom: 0.2em;
+}
+
+a:link {
+  color: var(--light);
+  text-decoration: none;
+  white-space: nowrap;
+  padding-right: 1em;
+}
+
+a:visited {
+  color: var(--light);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--gray);
+}
